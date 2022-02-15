@@ -1,0 +1,28 @@
+* {
+    margin: auto;
+    margin-top: 5rem;
+}
+
+thead {
+    background-color: #7f7f7f;
+}
+
+th {
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border: 2px solid #7f7f7f;
+}
+
+table {
+    border: 1px solid #7f7f7f; 
+}
