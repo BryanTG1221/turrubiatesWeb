@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #14273a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 600px;
+    background-color: #ffffff;
+    
+}
+
+section p {
+    overflow: hidden;
+    max-height: 0;
+    text-align: justify;
+    background-color: #ffffff;
+    transition: all .2 ease-in-out;
+}
+
+section a {
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    background-color: #212121;
+    color: white;
+    border-bottom: 2px solid gray;
+}
+
+section:target p {
+    max-height: 120px;
+    padding: 10px;
+}
