@@ -1,0 +1,107 @@
+:root {
+    --SizeWidth:200px;
+    --SizeHeight:200px;
+    --PrimaryColor:#202230;
+    --SecundaryColor:#1ed3ca;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6vh;
+    background-color: var(--PrimaryColor) ;
+}
+
+.list__github {
+    display: flex;
+    align-items: center;
+}
+
+nav #img__logoZT {
+    height: 25px;
+    margin-left: 2rem;
+}
+
+nav i {
+    font-size: 1.8rem;
+}
+
+nav .link__github {
+    margin-right: 2rem;
+    margin-left: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: small;
+    font-weight: lighter;
+    text-align: center;
+}
+.contenedor {
+    width: 100%;
+    height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 100px;
+}
+
+.caja1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PrimaryColor);
+    width: var(--SizeWidth);
+    height: var(--SizeHeight);
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.caja2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--SecundaryColor);
+    width: var(--SizeWidth);
+    height: var(--SizeHeight);
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.caja3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: var(--PrimaryColor) 2px solid;
+    width: var(--SizeWidth);
+    height: var(--SizeHeight);
+    color: var(--PrimaryColor);
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.caja4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: var(--SizeWidth);
+    height: var(--SizeHeight);
+    color: white;
+    font-weight: bold;
+    border-radius: 50%; 
+}
+
+
