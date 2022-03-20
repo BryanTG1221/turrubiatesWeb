@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="Container-Main">
+        <aside class="Nav-Bar">
+            <div class="profile-section">
+                <img id="img-profile" src="https://scontent.fnld1-1.fna.fbcdn.net/v/t39.30808-6/272783367_126468376545437_6932258094316384201_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeH3r1R6KAF02xcOK6KFOK6G09gXkAXU64_T2BeQBdTrj3IgDBGPcV5RetUxciLn1ltBbhYXowAMEwzgxGOa-pIK&_nc_ohc=NiUIPYo3AxsAX_6jDBS&_nc_ht=scontent.fnld1-1.fna&oh=00_AT_hOVrh1kongoQ-Q2xTWUhtnSkZqUNqWhlQFjvN3aR6cg&oe=623C542F" alt="Perfil-Image">
+                <p class="profile-user">Bryan Turrubiates</p>
+                <div class="menu-options">
+                    <ul class="list-bar">
+                        <li class="items">
+                            <i class='bx bx-home icons' style='color:#928e8e'  ></i>
+                            <p class="tittle-icons">Home</p>    
+                        </li>
+                        <li class="items">
+                            <i class='bx bx-search-alt-2 icons' style='color:#928e8e' ></i>
+                            <p class="tittle-icons">Search</p>
+                        </li>
+                        <li class="items">
+                            <i class='bx bx-heart icons' style='color:#928e8e' ></i>
+                            <p class="tittle-icons">My Favorites</p>
+                        </li>
+                        <li class="items playlist">
+                            <i class='bx bxs-playlist icons' style='color:#928e8e' ></i>
+                            <p class="tittle-icons">Playlists</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="player-music">
+                <p class="tittle-song">Dame Love Remix</p>
+                <ul class="music-player">
+                    <li>
+                        <i class='bx bx-skip-previous-circle icons-player'   ></i>
+                    </li>
+                    <li>
+                        <i class='bx bx-play-circle icons-player'  ></i>
+                    </li>
+                    <li>
+                        <i class='bx bx-skip-next-circle icons-player'  ></i>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+        <div class="Container-sections">
+            <section class="section-container caja1">
+                <div class="box-playlist box1"></div>
+                <p class="tittle-playlist"> 🔵 Trap Argentino 🔵</p>
+            </section>
+            <section class="section-container caja2">
+                <div class="box-playlist box2"></div>
+                <p class="tittle-playlist">🟡 Regional Mexicano 🟡</p>
+            </section>
+            <section class="section-container caja3">
+                <div class="box-playlist box3"></div>
+                <p class="tittle-playlist">🔴 The Weeknd 🔴</p>
+            </section>
+            <section class="section-container caja4">
+                <div class="box-playlist box4"></div>
+                <p class="tittle-playlist">🟣 Party Time 🟣</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

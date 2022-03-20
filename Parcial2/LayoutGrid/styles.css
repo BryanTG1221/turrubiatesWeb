@@ -1,0 +1,191 @@
+:root {
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+    --menuColor: #212121;
+    --backgroundColor:#121212;
+    --PrimaryColor:#1db954;
+    --font:#b3b3b3;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.Container-Main {   
+    background-color: var(--backgroundColor);
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 10% 90%;
+}
+
+.Container-sections {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.Nav-Bar {
+    background-color: var(--menuColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.profile-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    color: white;
+}
+
+#img-profile {
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px var(--PrimaryColor) solid;
+}
+
+.profile-user {
+    font-size: var(--lg);
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.menu-options {
+    display: flex;  
+    width: 100%;
+}
+
+.list-bar {
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.tittle-icons {
+    margin-left: 5px;
+    font-size: var(--md);
+}
+
+.icons {
+    font-size: 25px ;
+}
+
+.playlist {
+    background-color: #2e2e2e;
+    border-bottom: 1px var(--PrimaryColor) solid;
+}
+
+.player-music {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    background: url("https://i.ytimg.com/vi/MiVmqDDySbQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNlxdFKUHmCa-sYKFLrOaex6XROw");
+    background-repeat: no-repeat;
+    background-size: auto;  
+    background-position-x: center;
+    border-radius:  18px 18px 0px 0px;
+    border-top: 1px var(--PrimaryColor) solid;
+    color: white;
+}
+
+.tittle-song {
+    margin-bottom: 15px;
+}
+
+.music-player { 
+    padding: 0;
+    display: flex;
+    list-style: none;
+    margin-bottom: 10px;
+    
+}
+
+.icons-player {
+    font-size: 35px;
+    color: var(--PrimaryColor);
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.box-playlist {
+    background-color: var(--menuColor);
+    width: 75%;
+    height: 80%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.box1 {
+    background: url("https://cdn.discordapp.com/attachments/853016013804666921/955002491639037992/120487240_203623207794800_920500606894524069_n_1.jpg");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 10px #53b2ff;
+}
+.box2 {
+    background: url("https://th.bing.com/th/id/R.369dae400bd0a2508f5fdb7d65006022?rik=lLtM1j7YuWucpA&pid=ImgRaw&r=0");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 10px #ffb453;
+}
+.box3 {
+    background: url("https://th.bing.com/th/id/R.6676330b61d580ee09979faf49a6ea1a?rik=umWr8eaE19cs0g&riu=http%3a%2f%2fricardopolo.net%2fwp-content%2fuploads%2f2021%2f03%2fWEEKND-baja-portada-1024x1024.jpg&ehk=ey2gESCn61FbflaVv7eMvEiJjzmQUAa%2ffPqNhp7bAw4%3d&risl=&pid=ImgRaw&r=0");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 10px #ffa1a1;
+}
+.box4 {
+    background: url("https://wallpapercave.com/wp/wp2646803.jpg");
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 10px #a2a1ff;
+}
+
+.tittle-playlist {
+    font-size: var(--md);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
