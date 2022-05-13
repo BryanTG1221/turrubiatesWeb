@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="scriptAjax.js"></script> 
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 id="titulo">Formula 1: Registro de Pilotos 🏎</h1>
+        <form id="formulario" class="row g-3">
+            <div class="col-md-6">
+                <label for="firstname" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="firstname" required placeholder="Charles">
+            </div>
+            <div class="col-md-6">
+                <label for="lastname" class="form-label">Apellido:</label>
+                <input type="text" class="form-control" id="lastname" required placeholder="Leclerc">
+            </div>
+            <div class="col-md-8">
+                <label for="escuderia" class="form-label">Escuderia:</label>
+                <input type="text" class="form-control" id="escuderia" required placeholder="Scuderia Ferrari">
+            </div>
+            <div class="col-md-2">
+                <label for="numero" class="form-label">Numero:</label>
+                <input type="text" class="form-control" id="numero" required placeholder="16">
+            </div>
+            <div class="col-md-2">
+                <label for="edad" class="form-label">Edad:</label>
+                <input type="text" class="form-control" id="edad" required placeholder="24">
+            </div>
+            <div class="col-md-3">
+                <label for="poles" class="form-label">Poles:</label>
+                <input type="text" class="form-control" id="poles" required placeholder="9">
+            </div>
+            <div class="col-md-3">
+                <label for="podios" class="form-label">Podios:</label>
+                <input type="text" class="form-control" id="podios" required placeholder="13">
+            </div>
+            <div class="col-md-3">
+                <label for="victorias" class="form-label">Victorias:</label>
+                <input type="text" class="form-control" id="victorias" required placeholder="2">
+            </div>
+            <div class="col-md-12"> 
+                <button type="button" id ="btn1" class="btn btn-primary">Registrar</button>
+                <button type="button" id ="btn2" class="btn btn-secondary">Modal</button>
+                <button type="button" id ="botonAjax" class="btn btn-secondary">Peticion Ajax</button>
+                <button type="button" id ="botonJSON" class="btn btn-secondary">Peticion JSON</button>
+            </div>
+            <div id="liveAlertPlaceholder"></div>
+            <div id="modalid" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" id="closemodal" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            
+    </div>
+
+</body>
+</html>
