@@ -42,34 +42,35 @@
             
         }
         
-        document.getElementById("botonAjax").addEventListener("click", function(){
-            ajax();
-        })
+        document.getElementById("btnPromise").addEventListener("click", function(){
 
-        document.getElementById("botonJSON").addEventListener("click",function (){
-            refrescarFormulario();
-        })
+            let promesa = new Promise ((resolve,reject) => {
+                const AjaxPeticion = new XMLHttpRequest();
+                var url = 'peticion.php';
 
-
-        function refrescarFormulario () {
-
-            const AjaxRequest = new XMLHttpRequest();
-            var url = 'peticion.json';
-
-            AjaxRequest.onreadystate = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    console.log (this.responseText);
-                    document.getElementById("nombre").innerHTML = this.responseText;
+                AjaxPeticion.onreadystatechange = function () {
+                    if (AjaxPeticion.onreadystatechange == 4 && AjaxPeticion.status == 200) {
+                        console.log(this.responseText);
+                        resolve(AjaxPeticion.responseText);
+                    }
                 }
+                AjaxPeticion.open('GET',url,true);
+                AjaxPeticion.send();
+            });
 
-            }
-            AjaxRequest.open('POST',url,true,);
-            AjaxRequest.setRequestHeader('Content-Type', 'application/json');
-            AjaxRequest.send(JSON.stringify(
-                document.getElementById("nombre") = nombre
-            ));
+            promesa.then(value => {console.log('Llego'); document.getElementById("titulo").innerHTML = value});
+            
+        });
 
-           
-        }
+        document.getElementById("btnFetch").addEventListener("click",function(){
+            
+            let promise = fetch('peticion.php');
 
-}
+            promise.then(respuesta => respuesta.json()).then(datos => console.log(datos));
+        });
+
+
+
+
+    }
+
