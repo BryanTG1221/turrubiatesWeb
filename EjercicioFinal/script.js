@@ -4,10 +4,10 @@ window.onload = function () {
 
 
     $('#btnBuscar').click(function() {
-        let pilotoid=prompt("Teclee el dorsal del piloto a buscar");
+        let dorsal=prompt("Teclee el dorsal del piloto a buscar");
         let opcionUser = 'buscar';
 
-        $.post('peticion.php',{id:pilotoid,opcion:opcionUser},function(data){
+        $.post('peticion.php',{dorsal:dorsal,opcion:opcionUser},function(data){
           refrescar(data);
           },'json');
     });
@@ -25,6 +25,33 @@ window.onload = function () {
             refrescar(data);
           });
         
+    })
+
+    $('#btnEliminar').click(function(){
+      let eliminacion = prompt("Ingrese al piloto a eliminar");
+      let opcionUser = 'eliminar';
+
+      $.post('peticion.php',{eliminado:eliminacion,opcion:opcionUser},function(){
+        alert("Se elimino con exito");
+      });
+
+
+  })
+
+    $('#btnEditar').click(function(){
+        let nombre = document.getElementById("nombre").value;
+        let apellido = document.getElementById("apellido").value;
+        let dorsal = document.getElementById("dorsal").value;
+        let escuderia = document.getElementById("escuderia").value;
+        let edad = document.getElementById("edad").value;
+        let opcionUser = 'editar';
+
+        $.post('peticion.php',{dorsal:dorsal,opcion:opcionUser,nombreU:nombre,apellidoU:apellido,escuderiaU:escuderia,edadU:edad},function(data){
+          alert("Se agrego con exito");
+          refrescar(data);
+        });
+
+
     })
 
     function refrescar(objeto) {
