@@ -47,7 +47,7 @@ window.onload = function () {
         let opcionUser = 'editar';
 
         $.post('peticion.php',{dorsal:dorsal,opcion:opcionUser,nombreU:nombre,apellidoU:apellido,escuderiaU:escuderia,edadU:edad},function(data){
-          alert("Se agrego con exito");
+          alert("Se Edito con exito");
           refrescar(data);
         });
 

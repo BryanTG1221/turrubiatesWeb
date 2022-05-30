@@ -81,6 +81,29 @@ else if ($opcionUser == 'eliminar') {
         
         echo "Se hizo con exito";
 }
+else if ($opcionUser == 'editar') {
+
+    try {
+
+        $nombreU = $_POST['nombreU'];
+        $apellidoU = $_POST['apellidoU'];
+        $dorsalU = $_POST['dorsal'];
+        $escuderiaU = $_POST['escuderiaU'];
+        $edadU = $_POST['edadU'];
+
+        $consultaSql = "UPDATE formulario SET nombre = '$nombreU', apellido = '$apellidoU', dorsal = '$dorsalU',escuderia = '$escuderiaU',edad = '$edadU' WHERE dorsal = '$dorsalU'";
+        $consulta = $con -> prepare($consultaSql);
+        $consulta -> execute();
+        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+        $consulta->closeCursor();
+        
+        } catch(PDOException $e) {
+            echo "Error de consulta a la base de datos";
+            echo $e->getMessage();
+        }
+        
+        echo "Se hizo con exito";
+}
    
 
 ?>
