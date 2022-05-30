@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="resources/Logo BT 3.0.png" type="image/x-icon">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container-main">
+        <form class="form-main">
+            <div class="container-main-inputs">
+                <div class="container-inputs">
+                    <div class="container-titulo">
+                        <h1>
+                            Formulario de Registro
+                        </h1>
+                    </div>
+                    <label class="titulo" for="nombre">Nombre</label>
+                    <input class="input-container" id="nombre" name="nombre" type="text">
+            
+                    <label class="titulo" for="apellido">Apellido</label>
+                    <input class="input-container" id="apellido" name="apellido" type="text">
+            
+                    <label class="titulo" for="dorsal">Dorsal</label>
+                    <input class="input-container" id="dorsal" type="number" name="dorsal">
+            
+                    <label class="titulo" for="escuderia">Escuderia</label>
+                    <input class="input-container" id="escuderia" type="escuderia" name="escuderia">
+            
+                    <label class="titulo" for="edad">Edad</label>
+                    <input class="input-container" id="edad" type="number" name="edad">
+        
+                    <div class="btn-container">
+                        <button id="btnAgregar">Agregar</button>
+                        <button id="btnBuscar">Buscar</button>
+                        <button id="btnConsultar" type="button" id="btnConsultar">Consultar</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="right">
+        <div class="container-img">
+            <div class="container-logoF1">
+                <img src="resources/logoF1.png" alt="f1logo">
+                <h3>www.formula1.com</h3>
+            </div>
+        </div>
+        <div class="container-social-media">
+            <div id="icontwitter" class="icon-media">
+                 <i class='bx bxl-twitter twitter' ></i>
+                </div>
+            <div id="iconfacebook" class="icon-media">
+                <i class='bx bxl-facebook-circle facebook'></i>
+            </div>
+            <div id="iconinstagram" class="icon-media">
+                <i class='bx bx-mail-send mail'></i> 
+            </div>
+        </div>
+    </div>
+
+
+    </form>
+</body>
+</html>
