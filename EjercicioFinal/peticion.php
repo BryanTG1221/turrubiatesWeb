@@ -1,6 +1,11 @@
 <?php
 
-$iduser=$_POST['id'];
+$opcionUser = $_POST['opcion'];
+$nombreU = $_POST['nombreU'];
+$apellidoU = $_POST['apellidoU'];
+$dorsalU = $_POST['dorsal'];
+$escuderiaU = $_POST['escuderiaU'];
+$edadU = $_POST['edadU'];
 
 $hostname='localhost';
 $database='w19100793';
@@ -18,17 +23,41 @@ try {
 
 //$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-try {
-$consultaSql = "select * from formulario where id=".$iduser;
-$consulta = $con -> prepare($consultaSql);
-$consulta -> execute();
-$resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-$consulta->closeCursor();
+if ($opcionUser == 'buscar') {
 
-} catch(PDOException $e) {
-    echo "Error de consulta a la base de datos";
-    echo $e->getMessage();
+    try {
+    $consultaSql = "select * from formulario where dorsal=".$iduser;
+    $consulta = $con -> prepare($consultaSql);
+    $consulta -> execute();
+    $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    $consulta->closeCursor();
+    
+    } catch(PDOException $e) {
+        echo "Error de consulta a la base de datos";
+        echo $e->getMessage();
+    }
+    
+    echo json_encode($resultado);
+    
+}
+else if ($opcionUser == 'agregar') {
+
+    try {
+        $consultaSql = "INSERT INTO formulario(id,nombre,apellido,dorsal,escuderia,edad) VALUES ('','$nombreU','$apellidoU','$dorsalU','$escuderiaU','$edadU')";
+        $consulta = $con -> prepare($consultaSql);
+        $consulta -> execute();
+        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+        $consulta->closeCursor();
+        
+        } catch(PDOException $e) {
+            echo "Error de consulta a la base de datos";
+            echo $e->getMessage();
+        }
+        
+        echo "Se hizo con exito";
+
 }
 
-echo json_encode($resultado);
+   
+
 ?>

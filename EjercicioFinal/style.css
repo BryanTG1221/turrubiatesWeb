@@ -139,7 +139,7 @@ body {
 }
 
 
-.btn-container #btnConsultar {
+.btn-container #btnEliminar {
     width: 150px;
     padding: 1.3em 3em;
     font-size: 12px;
@@ -156,14 +156,44 @@ body {
     outline: none;
 }
       
-.btn-container #btnConsultar:hover {
+.btn-container #btnEliminar:hover {
     background-color: #dd1919;
     box-shadow: 0px 15px 20px rgba(229, 46, 46, 0.4);
     color: #fff;
     transform: translateY(-7px);
 }
       
-.btn-container #btnConsultar:active {
+.btn-container #btnEliminar:active {
+    transform: translateY(-1px);
+}
+
+/*BAKSFBKJ*/
+
+.btn-container #btnEditar {
+    width: 150px;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+      
+.btn-container #btnEditar:hover {
+    background-color: #f5de0d;
+    box-shadow: 0px 15px 20px rgba(226, 229, 46, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+      
+.btn-container #btnEditar:active {
     transform: translateY(-1px);
 }
 
