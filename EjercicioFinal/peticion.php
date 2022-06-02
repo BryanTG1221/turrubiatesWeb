@@ -48,8 +48,11 @@ else if ($opcionUser == 'agregar') {
         $dorsalU = $_POST['dorsal'];
         $escuderiaU = $_POST['escuderiaU'];
         $edadU = $_POST['edadU'];
+        $victoriasU = $_POST['victoriasU'];
+        $podiosU = $_POST['podiosU'];
 
-        $consultaSql = "INSERT INTO formulario(id,nombre,apellido,dorsal,escuderia,edad) VALUES ('','$nombreU','$apellidoU','$dorsalU','$escuderiaU','$edadU')";
+
+        $consultaSql = "INSERT INTO formulario(id,nombre,apellido,dorsal,escuderia,edad,victorias,podios) VALUES ('','$nombreU','$apellidoU','$dorsalU','$escuderiaU','$edadU','$victoriasU','$podiosU')";
         $consulta = $con -> prepare($consultaSql);
         $consulta -> execute();
         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
@@ -90,8 +93,11 @@ else if ($opcionUser == 'editar') {
         $dorsalU = $_POST['dorsal'];
         $escuderiaU = $_POST['escuderiaU'];
         $edadU = $_POST['edadU'];
+        $victoriasU = $_POST['victoriasU'];
+        $podiosU = $_POST['podiosU'];
 
-        $consultaSql = "UPDATE formulario SET nombre = '$nombreU', apellido = '$apellidoU', dorsal = '$dorsalU',escuderia = '$escuderiaU',edad = '$edadU' WHERE dorsal = '$dorsalU'";
+
+        $consultaSql = "UPDATE formulario SET nombre = '$nombreU', apellido = '$apellidoU', dorsal = '$dorsalU',escuderia = '$escuderiaU',edad = '$edadU', victorias = '$victoriasU', podios = '$podiosU' WHERE dorsal = '$dorsalU'";
         $consulta = $con -> prepare($consultaSql);
         $consulta -> execute();
         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
@@ -103,6 +109,9 @@ else if ($opcionUser == 'editar') {
         }
         
         echo "Se hizo con exito";
+}
+else {
+    echo "F";   
 }
    
 

@@ -40,12 +40,19 @@
             
                     <label class="titulo" for="edad">Edad</label>
                     <input class="input-container" id="edad" type="number" name="edad">
+
+                    <div class="container-Estadisticas">
+                        <label class="titulo" for="victorias">👑</label>
+                        <input class="input-stats" type="text" name="victorias" id="victorias">
+                        <label for="podios">🥇</label>
+                        <input class="input-stats" type="text" name="podios" id="podios">
+                    </div>
         
                     <div class="btn-container">
                         <button id="btnAgregar" type="button">Agregar</button>
                         <button id="btnBuscar" type="button">Buscar</button>
                         <button id="btnEliminar" type="button">Eliminar</button>
-                        <button id="btnEditar" type="button">Editar</button>
+                        <button id="btnEditar"  type="button">Editar</button>
                     </div>
                 </div>
             </div>
@@ -69,6 +76,27 @@
             </div>
         </div>
     </div>
+    <section class="modalBox">
+        <div class="modalContent">
+            <h3 class="modal-titulo">Ingresa el Numero de Piloto</h3>
+            <input class="input-container-modal" id="input-modal-numero" type="number">
+            <div>
+                <button id="btn-Modal-Buscar" class="btn-modal" type="button">Buscar</button>
+                <button id="btn-Modal-Cerrar"class="btn-modal" type="button">Cerrar</button>
+            </div>
+            
+        </div>
+    </section>
+    <section class="modalBoxNotification">
+        <div class="modalContentNotification">
+            <img class="img-done" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Check_green_circle.svg/1024px-Check_green_circle.svg.png" alt="Check">
+            <h3 class="modal-tituloNotification">LA OPERACION SE REALIZO CON EXITO</h3>
+            <div>
+                <button id="btn-Modal-CerrarNotification"class="btn-modal" type="button">Cerrar</button>
+            </div>
+            
+        </div>
+    </section>
 
 
     </form>
